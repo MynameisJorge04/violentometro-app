@@ -1,0 +1,52 @@
+.violentometro--container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.text--container{
+    width: 80%;
+    text-align: center;
+}
+
+.text--container h2{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    color: #000000;
+}
+
+.text--container span{
+    color: #6C1D45;
+}
+
+.text--container p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+
+    color: #293241;
+}
+
+.button--popup{
+    background: #6C1D45;
+    border-radius: 20px;
+    color: white;
+    padding: 1em 1.7em;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    /* or 162% */
+
+    color: #E8E8E8;
+}
+
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}

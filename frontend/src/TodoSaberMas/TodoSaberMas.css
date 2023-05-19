@@ -1,0 +1,67 @@
+.sabermas--container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #6C1D45;
+    margin: 1em 0;
+}
+
+.text--container--sa {
+    width: 80%;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.text--container--sa h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 26px;
+    /* identical to box height, or 162% */
+
+
+    color: #FFFFFF;
+}
+
+.text--container--sa p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* or 125% */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+.button-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+
+.button-container button{
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    border: none;
+    width: 40%;
+    padding: 1em;
+    margin: 0 0.5em;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height, or 125% */
+
+    text-align: center;
+
+    color: #000000;
+}

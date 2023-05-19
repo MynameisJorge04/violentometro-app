@@ -1,0 +1,240 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 32em;
+    height: 30.4em;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("#");
+    height: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.title--container {
+    width: 80%;
+    min-width: 28.8em;
+    max-width: 90em;
+    height: 10.8em;
+    margin-top: 4em;
+    text-align: center;
+    align-self: center;
+}
+
+.title--container h1{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 3.4rem;
+    color: white;
+}
+
+.title--container p{
+    margin-top: 1.5em;
+    font-size: 1.4rem;
+    font-weight: 550;
+    line-height: 1.8rem;
+    color: #FFE9D5;
+}
+
+.aprendizaje{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 32em;
+    height: auto;
+    text-align: center;
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+.aprendizaje--container{
+    width: 80%;
+    max-width: 90em;
+    height: auto;
+    margin-top: 2em;
+    text-align: center;
+    align-self: center;
+}
+
+.aprendizaje--container img {
+    width: 100%;
+    /*Su crecimiento es automatico*/
+    height: auto;
+    margin-top: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.aprendizaje--container h2{
+    font-size: 3.4rem;
+    font-weight: bold;
+    line-height: 3.4rem;
+    color: #201E1C;
+    margin-top: 0.4em;
+    margin-bottom: 1em;
+}
+
+.aprendizaje--container h3{
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 3.4rem;
+    color: #000000;
+    padding: 0.5em;
+}
+
+.aprendizaje--container p{
+    margin-top: 1.1em;
+    margin-bottom: 1.1em;
+    font-size: 1.5rem;
+    font-weight: 520;
+    line-height: 1.8rem;
+    color: #403f3f;
+}
+
+.aprendizaje--container--items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2cm;
+}
+
+.aprendizaje--container--item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2cm;
+}
+
+.aprendizaje--container--item img {
+    max-width: 100px;
+    margin-right: 2cm;
+}
+
+.aprendizaje--container--item p {
+    width: 70%;
+}
+
+a:hover h2 {
+    text-decoration: underline;
+    color: #800000;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.89);
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
+
+.popup img {
+    height: auto;
+}
+
+.popup h1{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 3.4rem;
+    color:black;
+    margin-top: 1.1em;
+    margin-bottom: 1.1em;
+    text-align: center;
+    font-style: oblique;
+}
+
+.popup h4{
+    font-size: 1.5rem;
+    font-weight: 550;
+    line-height: 1.8rem;
+    color: black;
+    margin-top: 1.1em;
+    margin-bottom: 1.1em;
+    text-align: center;
+}
+
+.popup p{
+    font-size: 1.5rem;
+    font-weight: 520;
+    line-height: 1.8rem;
+    color: black;
+}
+
+.left-image {
+    float: left;
+    max-width: 8%;
+    margin-right: 10px;
+}
+
+.right-image {
+    float: right;
+    max-width: 10%;
+    margin-left: 10px;
+}
+
+.center-image{
+    max-width: 40%;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+.button {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 15px;
+    background-color: #5c1c1c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #800000;
+}
+
+@media only screen and (max-width: 600px) {
+    .button .button--descargas{
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+}
+
+.descargas--contenedor{
+    background-color: #f7f9fa;
+    text-align: center;
+}
+
+.descargas--contenedor h2{
+    font-size: 1.9rem;
+    font-weight: 600;
+    line-height: 3.4rem;
+    color: #201E1C;
+    padding: 0.5em;
+}
+
+.descargas--contenedor p{
+    font-size: 1.5rem;
+    padding: 0.5em;
+}
