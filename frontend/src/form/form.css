@@ -1,0 +1,96 @@
+body{
+    background-color: #B38DA2;
+    font-family: Roboto,Sans-serif;
+}
+.form{
+    height: 1100px;
+    width: 600px;
+    margin: auto;
+
+}
+
+.title-div{
+    text-align: center;
+    height: 150px;
+    width: 600px;
+    background-color: #FDFEFE;
+    margin: 15px;
+    border-radius: 8px;
+    border-top: 8px solid #8C1858;
+    padding: 25px;
+}
+.uno-div, .dos-div, .tres-div, .cuatro-div, .cinco-div{
+    border-top: 8px solid #8C1858;
+    height: 150px;
+    width: 650px;
+    background-color: #FDFEFE;
+    margin: 15px;
+    border-radius: 8px;
+}
+.pregunta{
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    font-size: 15px;
+}
+
+.btn{
+    height: 36px;
+    width: 100px;
+    background-color: #8C1858;
+    border-radius: 5px;
+    font-size: 14px;
+    letter-spacing: .5px;
+    font-weight: 540;
+    border: none;
+    padding: 10px;
+    position: absolute;
+    margin: 15px;
+    color: white;
+}
+
+.last-div h2{
+    text-align: center;
+    padding-top: 50px;
+    color: #a2a4a6;
+    font-weight: 200;
+}
+.term{
+    font-size: 12px;
+    padding-left: 65px;
+    padding-top: 5px;
+    position: absolute;
+}
+.never{
+    padding-left: 15px;
+    font-size: 12px;
+    padding-top: 70px;
+    font-weight: 400;
+
+}
+.option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+}
+
+.option input[type="radio"] {
+    margin-right: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #8C1858;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+
+.option input[type="radio"]:checked {
+    background-color: #A95182;
+}
+
+.option label {
+    cursor: pointer;
+}
