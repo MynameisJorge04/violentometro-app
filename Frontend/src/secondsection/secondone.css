@@ -1,0 +1,27 @@
+.secondnav{
+    height: 7vh;
+    background-color:#2f302f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.oferta--imagen--texto{
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.oferta--imagen--texto img{
+    width: 11em;
+}
+
+.oferta--imagen--texto p{
+    font-size: 1.3rem;
+    justify-content: end;
+    font-weight: bold;
+    text-align: end;
+}

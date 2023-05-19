@@ -1,0 +1,30 @@
+/*Footer -- Pagina general*/
+
+.container {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.container h3{
+    text-align: center;
+}
+
+.item {
+    width: 25%;
+    height: 100px;
+    color: var(--white)
+}
+
+footer{
+    background: #1e291e;
+    width: 100%;
+    height: auto;
+    padding: 2em;
+    margin-top: auto;
+}
+
+.item {
+    width: 25%;
+    height: 100px;
+    color: var(--white)
+}

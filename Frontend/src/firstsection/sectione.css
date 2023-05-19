@@ -1,0 +1,54 @@
+/*Contenido parte superior*/
+
+.oferta--imagen--texto{
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.oferta--imagen--texto img{
+    width: 11em;
+}
+
+.oferta--imagen--texto p{
+    font-size: 1.3rem;
+    justify-content: end;
+    font-weight: bold;
+    text-align: end;
+}
+
+/*Nav gobierno del estado*/
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul.navbar li {
+    float: left;
+}
+
+ul.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color: #ffffff30;
+}
+
+.firstnav{
+    height: 7vh;
+    background-color:#1e291e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
