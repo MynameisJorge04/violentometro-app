@@ -1,28 +1,28 @@
+import React from 'react';
 import './App.css';
-import './ContenidoPrincipal/Principal.css'
-import './ContenidoPrincipal/Principal'
-import './Footer/Footer.css'
-import './Footer/Footer'
 
 import TodoHeader from './TodoHeader';
-
-import ContenidoPrincipal from './ContenidoPrincipal/Principal';
-import Footer from './Footer/Footer';
+import ContenidoPrincipal from './TodoContenidoPrincipal'
+import TodoFooter from './TodoFooter';
+import TodoViolentometroSection from './TodoViolentometroSection';
+import TodoSaberMas from './TodoSaberMas';
+import TodoButtonHome from './TodoButtonHome';
+import TodoSlider from './TodoSlider';
 
 
 function App() {
   return (
 
-    <div>
+    <div className="app--general">
+
       <TodoHeader
-      xd={"Conociendote mas"}
+      xd={"Instituto Politecnico Nacional"}
       />
-
-      <TodoHeader/>
-
-        <ContenidoPrincipal/>
-
-        <Footer/>
+      <TodoSlider/>
+      <TodoViolentometroSection/>
+      <TodoSaberMas/>
+      <TodoButtonHome/>
+      <TodoFooter/>
     </div>
 
 

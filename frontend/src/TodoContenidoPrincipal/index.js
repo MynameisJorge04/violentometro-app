@@ -1,6 +1,7 @@
 import React from "react";
+import './TodoContenidoPrincipal.css';
 
-const Principal = () => {
+const ContenidoPrincipal = () => {
     function openPopup() {
         document.getElementById('popup').style.display = 'block';
         document.getElementById('link-violentometro').style.display = 'none';
@@ -87,4 +88,4 @@ const Principal = () => {
     );
 }
 
-export default Principal;
+export default ContenidoPrincipal;

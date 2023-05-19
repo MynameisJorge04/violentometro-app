@@ -5,10 +5,12 @@ body {
   font-family: 'DM Sans';
   font-style: normal;
   background-color: #ffffff;
+  width: 100vw;
 }
 
 #root{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 }

@@ -1,9 +1,10 @@
 import React from "react";
+import './TodoFooter.css'
 
-const Footer = () => {
+const TodoFooter = () => {
     return (
         <footer>
-            <div className="container">
+            <div className="footer--container">
                 <div className="item"><img src="imgs/goblogo.png" alt="Logo gobierno" /></div>
                 <div className="item"><h3>Enlaces</h3></div>
                 <div className="item"><h3>¿Qué es gob.mx?</h3></div>
@@ -13,4 +14,4 @@ const Footer = () => {
     );
 }
 
-export default Footer;
+export default TodoFooter;

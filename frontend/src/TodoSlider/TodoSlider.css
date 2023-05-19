@@ -1,0 +1,34 @@
+.slider--container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slider--container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .slider--arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(200%);
+    background: rgba(255, 255, 255, 1);
+    color: #000000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .slider--container .slider--arrow:nth-child(1) {
+    left: 10px;
+  }
+  
+  .slider--container .slider--arrow:nth-child(3) {
+    right: 10px;
+  }
+  

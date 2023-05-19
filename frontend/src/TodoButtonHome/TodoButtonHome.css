@@ -1,0 +1,23 @@
+.butonhome--container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 4em 0;
+}
+
+.butonhome--container button {
+    background-color: #6C1D45;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: none;
+    width: 40%;
+    padding: 1em;
+    margin: 0 0.5em;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: white;
+}
