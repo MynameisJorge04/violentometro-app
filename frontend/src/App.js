@@ -11,9 +11,6 @@ function App() {
       xd={"Conociendote mas"}
       />
 
-      <TodoHeader
-      xd={"Hola amigo"}
-      />
     </div>
     
   );
