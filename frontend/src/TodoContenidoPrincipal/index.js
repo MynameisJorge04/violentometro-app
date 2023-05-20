@@ -1,5 +1,13 @@
 import React from "react";
 import './TodoContenidoPrincipal.css';
+import imgS from "../assets/s.png";
+import imgR from "../assets/r.png";
+import imgM from "../assets/m.png";
+import imgVerde from "../assets/verde.png";
+import imgAmarillo from "../assets/amarillo.png";
+import imgNaranja from "../assets/naranja.png";
+import imgRojo from "../assets/rojo.png";
+import imgMorado from "../assets/morado.png";
 
 const ContenidoPrincipal = () => {
     function openPopup() {
@@ -16,12 +24,6 @@ const ContenidoPrincipal = () => {
 
     return (
         <main className="" id="main">
-            <section className="banner">
-                <div className="title--container">
-                    <h1> Sí, la violencia también se mide </h1>
-                </div>
-            </section>
-
             <section className="aprendizaje">
                 <div className="aprendizaje--container">
                     <a id="link-violentometro" onClick={openPopup}>
@@ -32,12 +34,12 @@ const ContenidoPrincipal = () => {
                     <div id="popup" className="popup" style={{ display: 'none' }}>
                         <span className="close" onClick={closePopup}>&times;</span>
                         <h1>EL VIOLENTÓMETRO</h1>
-                        <img src="../s.png" alt="Ilustración" className="left-image" />
+                        <img src={imgS} alt="Ilustración" className="left-image" />
                         <p>El "Violentómetro" es como una "regla de medición" para saber si tu relación tiene más drama que una telenovela o si es tan tranquila como tomar una siesta en una hamaca.</p>
-                        <img src="../r.png" alt="Ilustración" className="right-image" />
+                        <img src={imgR} alt="Ilustración" className="right-image" />
                         <p>Te ayuda a identificar si estás en una relación saludable o si es momento de gritar "Sal de ahí!" y buscar una mejor película romántica.</p>
                         <h4>¡No permitas que el amor sea un programa de acción explosivo, mejor usa el Violentómetro y vive feliz!</h4>
-                        <img src="../m.png" alt="Ilustración" className="center-image" />
+                        <img src={imgM} alt="Ilustración" className="center-image" />
                     </div>
                 </div>
 
@@ -46,23 +48,23 @@ const ContenidoPrincipal = () => {
                     <p>El Violentómetro IPN se divide en <strong>cinco escalas de colores</strong>, que representan diferentes niveles de violencia:</p>
                     <div className="aprendizaje--container--items">
                         <div className="aprendizaje--container--item">
-                            <img src="../verde.png" alt="Img violencia sin daño" />
+                            <img src={imgVerde} alt="Img violencia sin daño" />
                             <p>Violencia Sin Daño: Representada por el color verde, indica una relación libre de violencia</p>
                         </div>
                         <div className="aprendizaje--container--item">
-                            <img src="../amarillo.png" alt="Img violencia verbal" />
+                            <img src={imgAmarillo} alt="Img violencia verbal" />
                             <p>Violencia Verbal: Representada por el color amarillo, abarca expresiones ofensivas, humillaciones y menosprecios verbales.</p>
                         </div>
                         <div className="aprendizaje--container--item">
-                            <img src="../naranja.png" alt="Img violencia Psicológica" />
+                            <img src={imgNaranja} alt="Img violencia Psicológica" />
                             <p>Violencia Psicológica: Representada por el color naranja, incluye manipulación emocional, control excesivo y amenazas.</p>
                         </div>
                         <div className="aprendizaje--container--item">
-                            <img src="../rojo.png" alt="Img violencia fisica" />
+                            <img src={imgRojo} alt="Img violencia fisica" />
                             <p>Violencia Física: Representada por el color rojo, engloba agresiones físicas como golpes, empujones y maltrato físico.</p>
                         </div>
                         <div className="aprendizaje--container--item">
-                            <img src="../morado.png" alt="Img violencia extrema" />
+                            <img src={imgMorado} alt="Img violencia extrema" />
                             <p>Violencia Extrema: Representada por el color morado, implica violencia sexual, violencia económica y amenazas de muerte.</p>
                         </div>
                     </div>
