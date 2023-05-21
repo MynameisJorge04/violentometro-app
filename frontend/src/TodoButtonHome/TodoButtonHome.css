@@ -29,3 +29,14 @@
     line-height: 26px;
     color: white;
 }
+
+.container--participa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: gray;
+    margin-left: 2cm;
+    margin-right: 2cm;
+}
+
