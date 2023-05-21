@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import './TodoViolentometroSection.css'
 
+//Imagenes
+
+import Imagen1 from '../assets/s.png';
+import Imagen2 from '../assets/r.png';
+import Imagen3 from '../assets/m.png';
+
 const TodoViolentometroSection = () => {
-  function openPopup() {
-    document.getElementById("popup").style.display = "block";
-    document.getElementById("link-violentometro").style.display = "none";
-    document.getElementById("boton-main").style.display = "none";
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const openPopup = (e) => {
+    e.preventDefault();
+    setIsPopupOpen(true);
   }
 
-  function closePopup() {
-    document.getElementById("popup").style.display = "none";
-    document.getElementById("contenido-adicional").style.display = "block";
-    document.getElementById("boton-main").style.display = "block";
+  const closePopup = (e) => {
+    e.preventDefault();
+    setIsPopupOpen(false);
   }
 
   return (
@@ -28,33 +34,36 @@ const TodoViolentometroSection = () => {
       </div>
 
       <div className="button-container">
-        <a id="link-violentometro" className="button--popup" onClick={openPopup}>
-          Ver mas
-        </a>
-        {/* Contenido del pop-up */}
-        <div id="popup" className="popup" style={{ display: "none" }}>
-          <span className="close" onClick={closePopup}>
-            &times;
-          </span>
-          <h1>EL VIOLENTÓMETRO</h1>
-          <img src="../s.png" alt="Ilustración" className="left-image" />
-          <p>
-            El "Violentómetro" es como una "regla de medición" para saber si tu
-            relación tiene más drama que una telenovela o si es tan tranquila
-            como tomar una siesta en una hamaca.
-          </p>
-          <img src="../r.png" alt="Ilustración" className="right-image" />
-          <p>
-            Te ayuda a identificar si estás en una relación saludable o si es
-            momento de gritar "Sal de ahí!" y buscar una mejor película
-            romántica.
-          </p>
-          <h4>
-            ¡No permitas que el amor sea un programa de acción explosivo, mejor
-            usa el Violentómetro y vive feliz!
-          </h4>
-          <img src="../m.png" alt="Ilustración" className="center-image" />
-        </div>
+        {!isPopupOpen && 
+          <a className="button--popup" onClick={openPopup}>
+            Ver mas
+          </a>
+        }
+        {isPopupOpen &&
+          <div className="popup">
+            <span className="close" onClick={closePopup}>
+              &times;
+            </span>
+            <h1>EL VIOLENTÓMETRO</h1>
+            <img src={Imagen1} alt="Ilustración" className="left-image" />
+            <p>
+              El "Violentómetro" es como una "regla de medición" para saber si tu
+              relación tiene más drama que una telenovela o si es tan tranquila
+              como tomar una siesta en una hamaca.
+            </p>
+            <img src={Imagen2} alt="Ilustración" className="right-image" />
+            <p>
+              Te ayuda a identificar si estás en una relación saludable o si es
+              momento de gritar "Sal de ahí!" y buscar una mejor película
+              romántica.
+            </p>
+            <h4>
+              ¡No permitas que el amor sea un programa de acción explosivo, mejor
+              usa el Violentómetro y vive feliz!
+            </h4>
+            <img src={Imagen3} alt="Ilustración" className="center-image" />
+          </div>
+        }
       </div>
     </section>
   );

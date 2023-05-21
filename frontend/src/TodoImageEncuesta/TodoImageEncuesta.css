@@ -1,0 +1,24 @@
+.container--imagenencuesta {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    text-align: center;
+    padding: 1em;
+    height: 30vh;
+}
+
+.my-link-class--encuesta{
+    text-decoration: none;
+}
+
+.image--encuesta {
+    width: 100%;
+}
+
+.image--caption {
+    width: 100%;
+    
+    color: black;
+}

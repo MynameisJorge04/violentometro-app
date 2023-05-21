@@ -2,3 +2,8 @@
   width: 100%;
   margin: 0;
 }
+
+.encuesta--imagen{
+  display: flex;
+  flex-wrap: wrap;
+}

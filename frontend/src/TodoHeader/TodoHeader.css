@@ -5,7 +5,6 @@
     width: auto;
     display: flex;
     align-items: center;
-    justify-content: end;
 }
 
 .oferta--imagen--texto img{
@@ -14,9 +13,7 @@
 
 .oferta--imagen--texto p{
     font-size: 1.3rem;
-    justify-content: end;
     font-weight: bold;
-    text-align: end;
 }
 
 /*Nav gobierno del estado*/
@@ -55,11 +52,13 @@ ul.navbar li a:hover {
 
 .secondnav{
     height: 7vh;
-    background-color:#2f302f;
+    background-color:#6C1D45;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: white;
+    width: 100%;
 }
 
 .oferta--imagen--texto{
@@ -67,7 +66,6 @@ ul.navbar li a:hover {
     width: auto;
     display: flex;
     align-items: center;
-    justify-content: end;
 }
 
 .oferta--imagen--texto img{
@@ -76,7 +74,5 @@ ul.navbar li a:hover {
 
 .oferta--imagen--texto p{
     font-size: 1.3rem;
-    justify-content: end;
     font-weight: bold;
-    text-align: end;
 }
