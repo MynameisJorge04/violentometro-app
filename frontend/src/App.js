@@ -66,11 +66,11 @@ function App() {
                 />
                 <TodoTextEncuesta
                   texto={
-                    "Elige alguna de las siguientes opciones quese acomoden a tus necesidades o de lo que quieras saber..."
+                    "Elige alguna de las siguientes opciones que se acomoden a tus necesidades o de lo que quieras saber..."
                   }
                 />
-                <TodoImageEncuesta imgSrc={ImagenEncuestaAlumnos} linkTo="/encuesta-form"/>
-                <TodoImageEncuesta imgSrc={ImagenEncuestaAlumnoDocente} />
+                <TodoImageEncuesta imgSrc={ImagenEncuestaAlumnos} linkTo="/encuesta-form" caption={"Alumno - Alumno"}/>
+                <TodoImageEncuesta imgSrc={ImagenEncuestaAlumnoDocente} caption={"Alumno - Docente"}/>
               </section>
             }
           />

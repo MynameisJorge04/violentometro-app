@@ -36,3 +36,16 @@ footer{
 .footer--container img {
     height: 30px;
 }
+
+
+@media (max-width: 768px) {
+    .item {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        flex: 0 0 100%;
+    }
+}
