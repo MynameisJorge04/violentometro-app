@@ -1,4 +1,3 @@
-
 .footer--container {
     flex-wrap: wrap;
     display: flex;
@@ -32,4 +31,8 @@ footer{
     width: 25%;
     height: 100px;
     color: white;
+}
+
+.footer--container img {
+    height: 30px;
 }

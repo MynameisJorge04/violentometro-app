@@ -1,0 +1,32 @@
+.navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1e291e;
+    color: #fff;
+    padding: 10px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.navigation-links {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navigation-links li {
+    margin-left: 30px;
+}
+
+.navigation-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation-links li a:hover {
+    color: #000000;
+}

@@ -9,7 +9,7 @@ import OtroImagen from "./assets/otro.png";
 import ImagenEncuestaAlumnos from "./assets/encuestaAlumno.png";
 import ImagenEncuestaAlumnoDocente from "./assets/encuestaAlumnoDocente.png";
 
-//COmponentes:
+//Componentes:
 
 import TodoHeader from "./TodoHeader";
 import TodoFooter from "./TodoFooter";
@@ -20,6 +20,7 @@ import TodoSlider from "./TodoSlider";
 import TodoTextEncuesta from "./TodoTextEncuesta";
 import TodoImageEncuesta from "./TodoImageEncuesta";
 import FormAlumno from "./TodoForm";
+import TodoNavigationBar from "./TodoNavigationBar";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             path="/"
             element={
               <section>
+                  <TodoNavigationBar/>
                 <TodoHeader xd={"Instituto Politecnico Nacional"} />
                 <TodoSlider />
                 <TodoViolentometroSection />
