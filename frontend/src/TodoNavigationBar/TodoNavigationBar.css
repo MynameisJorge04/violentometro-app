@@ -10,7 +10,6 @@
   .navigation-bar ul{
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
   }
 
   .logo img {
@@ -27,6 +26,7 @@
   
   .navigation-links li {
     width: 100%;
+    margin-right: 40px;
   }
   
   .navigation-links a {
