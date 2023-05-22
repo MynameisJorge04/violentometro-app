@@ -1,24 +1,23 @@
 .container--imagenencuesta {
     flex-wrap: wrap;
     display: flex;
+    flex-direction: column; /* Los elementos se apilarán verticalmente */
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 30%; /* Ajusta el ancho según necesites */
     text-align: center;
     padding: 1em;
-    height: 30vh;
 }
 
-.my-link-class--encuesta{
+.my-link-class--encuesta {
     text-decoration: none;
 }
 
 .image--encuesta {
-    width: 100%;
+    max-width: 80%; /* La imagen será responsiva y se ajustará según el contenedor */
 }
 
 .image--caption {
     width: 100%;
-    
     color: black;
 }

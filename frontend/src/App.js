@@ -48,7 +48,7 @@ function App() {
                 <TodoHeader xd={"Conociendote mas"} />
                 <TodoTextEncuesta
                   texto={
-                    "Elige alguna de las siguientes opciones que se acomode a tu situación:"
+                    "Para nosotros es importante conocer tu posición en la comunidad escolar, elige alguna de las siguientes opciones que se acomode a tu situación:"
                   }
                 />
                 <TodoImageEncuesta imgSrc={DocenteImagen} caption={"Docente"}/>
@@ -67,7 +67,7 @@ function App() {
                 />
                 <TodoTextEncuesta
                   texto={
-                    "Elige alguna de las siguientes opciones que se acomoden a tus necesidades o de lo que quieras saber..."
+                    "Selecciona la opción que se ajuste a la relación en la que estés interesado o a lo que deseas conocer..."
                   }
                 />
                 <TodoImageEncuesta imgSrc={ImagenEncuestaAlumnos} linkTo="/encuesta-form" caption={"Alumno - Alumno"}/>
