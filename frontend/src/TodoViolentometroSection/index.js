@@ -27,9 +27,10 @@ const TodoViolentometroSection = () => {
           ¿Que es el <span>violentometro?</span>
         </h2>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s
+          La UPGPG ha diseñado el Violentómetro, un material gráfico y didáctico
+          en forma de regla que consiste en visualizar las diferentes manifestaciones
+          de violencia que se encuentran ocultas en la vida cotidiana y que muchas veces
+          se confunden o desconocen.
         </p>
       </div>
 
