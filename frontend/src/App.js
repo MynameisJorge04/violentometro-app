@@ -50,6 +50,9 @@ function App() {
                   texto={
                     "Para nosotros es importante conocer tu posición en la comunidad escolar, elige alguna de las siguientes opciones que se acomode a tu situación:"
                   }
+                  texto1 ={
+                    "Es fundamental que nos apoyemos mutuamente y sigamos aprendiendo sobre este tema. Al entender y reconocer los inicios de la violencia, podemos tomar medidas para prevenirla y promover relaciones saludables y libres de violencia en todos los ámbitos de la sociedad."
+                  }
                 />
                 <TodoImageEncuesta imgSrc={DocenteImagen} caption={"Docente"}/>
                 <TodoImageEncuesta imgSrc={AlumnoImagen} caption={"Alumno"}  linkTo="/encuesta-segundopaso" />
@@ -68,6 +71,9 @@ function App() {
                 <TodoTextEncuesta
                   texto={
                     "Selecciona la opción que se ajuste a la relación en la que estés interesado o a lo que deseas conocer..."
+                  }
+                  texto1={
+                    "El llenado de una encuesta contra la violencia se convierte en una valiosa oportunidad para que estudiantes, profesores y personal administrativo expresen sus opiniones y compartan sus experiencias en relación con este problema que afecta a nuestra sociedad."
                   }
                 />
                 <TodoImageEncuesta imgSrc={ImagenEncuestaAlumnos} linkTo="/encuesta-form" caption={"Alumno - Alumno"}/>

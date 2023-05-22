@@ -6,3 +6,10 @@
     width: 100%;
     text-align: center;
 }
+
+.container--texto--encuesta p{
+    font-size: 1rem;
+    font-weight: 420;
+    line-height: 1.8rem;
+    color: #413f3f;
+}
