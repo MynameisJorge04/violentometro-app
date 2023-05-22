@@ -1,15 +1,21 @@
-import express from 'express';
-import {PORT} from './config.js'
+const express = require('express');
+const cors = require('cors');
+const { PORT } = require('./config');
+const indexRoutes = require('./routes/index.routes');
+const taskRoutes = require('./routes/tasks.routes');
 
-import indexRoutes from './routes/index.routes.js'
-import tasksRoutes from './routes/tasks.routes.js'
+const app = express();
 
-const app= express();
-
+// Middleware para analizar el cuerpo de la solicitud en formato JSON
+app.use(cors())
 app.use(express.json());
 
-app.use(indexRoutes);
-app.use(tasksRoutes);
 
-app.listen(PORT)
-console.log(`Server is listening on port ${PORT}`);
+
+// Rutas
+app.use(indexRoutes);
+app.use(taskRoutes);
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

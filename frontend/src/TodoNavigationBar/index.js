@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../assets/logo.png';
 import './TodoNavigationBar.css';
+import { Link } from "react-router-dom";
 
 const NavigationBar = () => {
     return (
@@ -13,6 +14,9 @@ const NavigationBar = () => {
                 <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <Link className="alert-button" to="/administrador">
+                    <li><a href="#contacto">Administrador</a></li>
+                </Link>
             </ul>
         </nav>
     );

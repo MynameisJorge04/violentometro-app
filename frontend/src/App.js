@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 //Imagenes:
 import AlumnoImagen from "./assets/alumno.png";
@@ -21,6 +21,7 @@ import TodoTextEncuesta from "./TodoTextEncuesta";
 import TodoImageEncuesta from "./TodoImageEncuesta";
 import FormAlumno from "./TodoForm";
 import TodoNavigationBar from "./TodoNavigationBar";
+import TodoCrud from "./TodoCrud";
 
 function App() {
   return (
@@ -83,6 +84,21 @@ function App() {
                   xd={"VIOLENTOMETRO, SÍ LA VIOLENCIA TAMBIEN SE MIDE"}
                 />
                 <FormAlumno/>
+              </section>
+            }
+          />
+
+          <Route
+            path="/administrador"
+            element={
+              <section >
+                <TodoHeader
+                  xd={"Administracion"}
+                />
+                <TodoCrud/>
+                <Link className="button--inicio" to="/">
+                  <button>Inicio</button>
+                </Link>
               </section>
             }
           />

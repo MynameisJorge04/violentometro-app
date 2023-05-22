@@ -1,32 +1,61 @@
+/* Estilos generales */
 .navigation-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #1e291e;
     color: #fff;
-    padding: 10px;
-}
+  }
 
-.logo img {
+  .navigation-bar ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo img {
     height: 40px;
-}
-
-.navigation-links {
+  }
+  
+  .navigation-links {
     list-style-type: none;
     display: flex;
     align-items: center;
     margin-left: auto;
-}
-
-.navigation-links li {
-    margin-left: 30px;
-}
-
-.navigation-links a {
+    text-align: center;
+  }
+  
+  .navigation-links li {
+    width: 100%;
+  }
+  
+  .navigation-links a {
     text-decoration: none;
     color: #fff;
-}
-
-.navigation-links li a:hover {
+  }
+  
+  .navigation-links li a:hover {
     color: #000000;
-}
+  }
+  
+  /* Estilos para pantallas pequeñas */
+  @media (max-width: 768px) {
+
+    
+    .navigation-bar {
+        display: flex;
+        flex-wrap: wrap;
+      padding: 10px 0;
+    }
+  
+    .navigation-links {
+        width: 100%;
+      margin-top: 20px;
+      justify-content: center;
+    }
+  
+    .navigation-links li {
+      margin: 10px 0;
+    }
+  }
+  

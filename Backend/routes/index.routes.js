@@ -1,11 +1,12 @@
-import {Router} from 'express';
-import {pool} from '../db.js'
-const router = Router();
+const express = require('express');
+const { pool } = require('../db');
 
-router.get("/ping", async (req, res) => {
-    const [rows] = await pool.query("SELECT 1 + 1 as result");
-    console.log(rows[0]);
-    res.json(rows[0]);
-});
+const router = express.Router();
 
-export default router;
+router.get('/ping', async(req, res) =>{
+    const result = await pool.query('SELECT 1 * 1 as q1');
+    console.log(result);
+    res.json('ping');
+})
+
+module.exports = router;

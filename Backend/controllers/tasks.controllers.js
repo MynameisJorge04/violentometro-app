@@ -1,121 +1,97 @@
-import { pool } from "../db.js";
+const { pool } = require("../db");
 
-export const getTasks = async (req, res) => {
-    try {
-        const query = "SELECT * FROM tasks";
-        const tasks = await pool.query(query);
-        res.status(200).json(tasks.rows);
-    } catch (error) {
-        res.status(500).json({ error: "Internal server error" });
+const getTasks = async (req, res) => {
+  try {
+    const query = "SELECT * FROM form";
+    const [rows, fields] = await pool.query(query); // Modificación: Desestructurar las filas y los campos
+
+    res.status(200).json(rows); // Modificación: Enviar solo las filas como respuesta
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+};
+
+
+const getTask = async (req, res) => {
+  try {
+    const taskId = req.params.id; // Obtén el ID de los parámetros de la solicitud
+    const query = "SELECT * FROM form WHERE id = ?";
+    const [rows, fields] = await pool.query(query, [taskId]); // Proporciona el valor del ID como un array
+
+    res.status(200).json(rows); // Envía el resultado obtenido como respuesta
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+};
+
+
+const createTask = async (req, res) => {
+  try {
+    const { q1, q2, q3, q4, q5 } = req.body; // Obtén los datos de la tarea del cuerpo de la solicitud
+
+    const query = "INSERT INTO form (q1, q2, q3, q4, q5) VALUES (?, ?, ?, ?, ?)";
+    await pool.query(query, [q1, q2, q3, q4, q5]); // Ejecuta la consulta SQL para insertar los datos en la tabla
+
+    res.status(201).json({ message: "Formulario creada exitosamente" }); // Devuelve una respuesta de éxito
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+};
+
+
+
+const updateTask = async (req, res) => {
+  try {
+    const taskId = req.params.id; // Obtén el ID de los parámetros de la solicitud
+    const { q1, q2, q3, q4, q5 } = req.body; // Obtén los datos actualizados de la tarea del cuerpo de la solicitud
+
+    const query = "UPDATE form SET q1 = ?, q2 = ?, q3 = ?, q4 = ?, q5 = ? WHERE id = ?";
+    await pool.query(query, [q1, q2, q3, q4, q5, taskId]); // Ejecuta la consulta SQL para actualizar los datos en la tabla
+
+    res.status(200).json({ message: "Tarea actualizada exitosamente" }); // Devuelve una respuesta de éxito
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+};
+
+
+const deleteTask = async (req, res) => {
+  try {
+    const taskId = req.params.id; // Obtén el ID de los parámetros de la solicitud
+
+    const query = "DELETE FROM form WHERE id = ?";
+    await pool.query(query, [taskId]); // Ejecuta la consulta SQL para eliminar la tarea de la tabla
+
+    res.status(200).json({ message: "Tarea eliminada exitosamente" }); // Devuelve una respuesta de éxito
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+};
+
+
+const selectTask = async (req, res) => {
+  try {
+    const taskId = req.params.id; // Obtén el ID de los parámetros de la solicitud
+
+    const query = "SELECT * FROM form WHERE id = ?";
+    const tasks = await pool.query(query, [taskId]); // Ejecuta la consulta SQL para seleccionar la tarea correspondiente en la tabla
+
+    if (tasks.length === 0) {
+      res.status(404).json({ message: "Tarea no encontrada" }); // Si no se encontró ninguna tarea con el ID especificado, devuelve una respuesta de error
+    } else {
+      res.status(200).json(tasks[0]); // Devuelve la tarea seleccionada en la respuesta
     }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error" });
+  }
 };
 
-export const getTask = async (req, res) => {
-    const taskId = req.params.id;
-    try {
-        const query = "SELECT * FROM tasks WHERE id = $1";
-        const task = await pool.query(query, [taskId]);
-        if (task.rowCount === 0) {
-            return res.status(404).json({ error: "Task not found" });
-        }
-        res.status(200).json(task.rows[0]);
-    } catch (error) {
-        res.status(500).json({ error: "Internal server error" });
-    }
-};
 
-export const createTask = async (req, res) => {
-    const { title, description } = req.body;
-    try {
-        const query = "INSERT INTO tasks (title, description) VALUES ($1, $2) RETURNING *";
-        const newTask = await pool.query(query, [title, description]);
-        res.status(201).json(newTask.rows[0]);
-    } catch (error) {
-        res.status(500).json({ error: "Internal server error" });
-    }
-};
-
-export const updateTask = async (req, res) => {
-    const taskId = req.params.id;
-    const { title, description } = req.body;
-    try {
-        const query = "UPDATE tasks SET title = $1, description = $2 WHERE id = $3 RETURNING *";
-        const updatedTask = await pool.query(query, [title, description, taskId]);
-        if (updatedTask.rowCount === 0) {
-            return res.status(404).json({ error: "Task not found" });
-        }
-        res.status(200).json(updatedTask.rows[0]);
-    } catch (error) {
-        res.status(500).json({ error: "Internal server error" });
-    }
-};
-
-export const deleteTask = async (req, res) => {
-    const taskId = req.params.id;
-    try {
-        const query = "DELETE FROM tasks WHERE id = $1 RETURNING *";
-        const deletedTask = await pool.query(query, [taskId]);
-        if (deletedTask.rowCount === 0) {
-            return res.status(404).json({ error: "Task not found" });
-        }
-        res.status(200).json(deletedTask.rows[0]);
-    } catch (error) {
-        res.status(500).json({ error: "Internal server error" });
-    }
-};
-export default router;
-
-/*
-
-import {pool} from "../db.js";
-export const getTasks = async (req, res) => {
-    res.send('---')
-    try {
-        const [result] = await pool.query(
-            "SELECT * FROM tasks ORDER BY createAt ASC"
-        );
-        res.json(result);
-    } catch (error) {
-        return res.status(500).json({ message: error.message });
-    }
-};
-export const getTask = async (req, res) => {
-    res.send('get')
-    try {
-        const [result] = await pool.query("SELECT * FROM tasks WHERE id = ?", [
-            req.params.id,
-        ]);
-
-        if (result.length === 0)
-            return res.status(404).json({ message: "Task not found" });
-
-        res.json(result[0]);
-    } catch (error) {
-        return res.status(500).json({ message: error.message });
-    }
-}
-export const selectTask = (req, res) => {
-    res.send('select')
-}
-export const updateTask = async (req, res) => {
-    res.send('update')
-        const result = await pool.query("UPDATE tasks SET ? WHERE id = ?", [
-            req.body,
-            req.params.id,
-        ]);
-        res.json(result);
-};
-export const deleteTask = async (req, res) => {
-    res.send('delete')
-        const [result] = await pool.query("DELETE FROM tasks WHERE id = ?", [
-            req.params.id,
-        ]);
-        if (result.affectedRows === 0)
-            return res.status(404).json({ message: "Task not found" });
-
-        return res.sendStatus(204);
-};
-*/
-
-
+module.exports = { getTasks, deleteTask, updateTask, createTask, getTask, selectTask};
 

@@ -7,12 +7,14 @@
     flex-wrap: wrap;
     padding: 1em 0;
     margin: 0 0 3em 0;
+    align-items: center;
+    justify-content: center;
 }
 
 .title-div{
     text-align: center;
     height: 150px;
-    width: 600px;
+    width: 100%;
     background-color: #FDFEFE;
     margin: 15px;
     border-radius: 8px;
@@ -22,7 +24,7 @@
 .uno-div, .dos-div, .tres-div, .cuatro-div, .cinco-div{
     border-top: 8px solid #8C1858;
     height: 150px;
-    width: 650px;
+    width: 100%;
     background-color: #FDFEFE;
     margin: 15px;
     border-radius: 8px;
@@ -36,7 +38,7 @@
 
 .btn{
     height: 36px;
-    width: 100px;
+    width: 50%;
     background-color: #8C1858;
     border-radius: 5px;
     font-size: 14px;
@@ -100,7 +102,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 500px;
+    width: 100%;
     padding: 40px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);

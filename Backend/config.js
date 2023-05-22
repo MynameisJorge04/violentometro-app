@@ -1,1 +1,2 @@
-export const PORT = 4000;
+const PORT = 4000;
+module.exports = { PORT };
