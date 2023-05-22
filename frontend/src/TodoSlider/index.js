@@ -3,12 +3,14 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 import './TodoSlider.css'
 
-import imagen1 from '../assets/1-slider.jpg';
-import imagen2 from '../assets/2-slider.jpg';
-import imagen3 from '../assets/3-slider.jpg';
+import imagen1 from '../assets/4-slider.png';
+import imagen2 from '../assets/5-slider.png';
+import imagen3 from '../assets/7-slider.jpg';
+import imagen4 from '../assets/8-slider.png';
+import imagen5 from '../assets/9-slider.png';
 
 const TodoSlider = () => {
-  const images = [imagen1, imagen2, imagen3];
+  const images = [imagen1, imagen2, imagen3, imagen4, imagen5];
   const [currentImage, setCurrentImage] = useState(0);
 
   const handleNext = () => {
