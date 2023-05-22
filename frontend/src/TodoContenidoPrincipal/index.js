@@ -77,15 +77,6 @@ const ContenidoPrincipal = () => {
                     </div>
                 </div>
             </section>
-
-            <section className="descargas--contenedor">
-                    <h2>¿Te interesa saber más?</h2>
-                    <p>Si te interesa conocer más acerca del violentometro a continuación puedes encontrar los links de descarga para conocer más acerca del tema.</p>
-                    <div className="botones--descargas">
-                        <button onClick={() => window.open("files/violentometro.pdf", "_blank")} className="button--descargas">Violentometro</button>
-                        <button className="button--descargas">¿Has visto el violentometro últimamente?</button>
-                    </div>
-            </section>
         </main>
     );
 }

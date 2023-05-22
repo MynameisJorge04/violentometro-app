@@ -94,3 +94,39 @@
 .option label {
     cursor: pointer;
 }
+
+.alert-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.alert-title {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.alert-message {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.alert-button {
+    padding: 8px 16px;
+    background-color: #8C1858;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.alert-button:hover {
+    background-color: rgba(128, 128, 128, 0.86);
+}
